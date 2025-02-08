@@ -45,17 +45,6 @@ var (
 	pumpFunFeeRecipient = solana.MustPublicKeyFromBase58("CebN5WGQ4jvEPvsVU4EoHEpgzq1VV7AbicfhtW4xC9iM")
 )
 
-// SetDevnetMode sets the pump.fun program addresses to the devnet addresses.
-// It is important to call this function if you are using the devnet.
-func SetDevnetMode() {
-	// This is the address you want to use as pump.fun fee recipient on devnet, otherwise, it
-	// will not work, as the official pump.fun fee recipient account is not initialized on devnet.
-	// I know, using global variables is ugly, but passing this address around everywhere
-	// (in BuyToken / SellToken), while it's actually a constant on mainnet is even uglier,
-	// considering that there is no other difference.
-	pumpFunFeeRecipient = solana.MustPublicKeyFromBase58("68yFSZxzLWJXkxxRGydZ63C6mHx1NLEDWmwN9Lb5yySg")
-}
-
 type BondingCurvePublicKeys struct {
 	BondingCurve           solana.PublicKey
 	AssociatedBondingCurve solana.PublicKey
