@@ -43,8 +43,8 @@ func TestConvertSlippageBasisPointsToPercentage(t *testing.T) {
 		expected            float64
 	}{
 		{"Zero slippage", 0, 1.0},
-		{"Two percent slippage", 2, 0.98},
-		{"Full slippage", 100, 0.0},
+		{"Two percent slippage", 200, 0.98},
+		{"Full slippage", 10000, 0.0},
 	}
 
 	for _, tt := range tests {

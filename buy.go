@@ -157,7 +157,7 @@ func getBuyInstructions(
 }
 
 func convertSlippageBasisPointsToPercentage(slippageBasisPoint uint) float64 {
-	return 1.0 - float64(slippageBasisPoint)/100.0
+	return 1.0 - float64(slippageBasisPoint)/10e3
 }
 
 // calculateBuyQuote calculates how many tokens can be purchased given a specific amount of SOL, bonding curve data, and percentage.
